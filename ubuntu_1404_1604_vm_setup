@@ -1,0 +1,28 @@
+-----------------------------------------------------------------
+
+Virtualbox additions:
+
+sudo apt-get install virtualbox-guest-dkms
+sudo apt-get install virtualbox-guest-utils
+sudo apt-get install virtualbox-guest-x11
+
+sudo apt-get remove libcheese-gtk23,
+sudo apt-get install xserver-xorg-core 
+sudo apt-get install -f virtualbox-guest-x11
+
+(Can also do it from: devices --> insert guest additions CD image --> run; For 16.04, if it fails, restart and try again.)
+
+Virtualbox extensions are for usb 2.0 support (or other stuff, like webcam...)
+
+sudo adduser xxxxxxx vboxsf (log in and log out afterwards)
+
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+
+This fixed an issue with compiling some c++ files:
+export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+
+-----------------------------------------------------------------
+
+

@@ -1,0 +1,27 @@
+Installing new local ckan version:
+
+(https://docs.ckan.org/en/2.9/maintaining/installing/install-from-source.html)
+
+python3 -m venv virtenvname
+. virtenvname/bin/activate
+
+pip install setuptools==44.1.0
+pip install --upgrade pip
+
+pip install -e 'git+https://github.com/ckan/ckan.git@ckan-2.9.2#egg=ckan[requirements]'
+
+mkdir virtenvname/etc/ckan/default
+ckan generate config virtenvname/etc/ckan/default/ckan.ini
+
+edit ckan.ini
+sqlalchemy.url = postgresql://ckan_default:pass@localhost/ckan_default
+ckan.site_id = default
+ckan.site_url = 127.0.0.1
+
+remove solr (https://askubuntu.com/questions/680690/how-to-uninstall-solr)
+reinstall solr (https://github.com/ckan/ckan/wiki/Install-and-use-Solr-6.5-with-CKAN)
+
+cp virtenvname/src/ckan/who.ini virtenvname/etc/ckan/default/who.ini
+
+ckan.storage_path = /var/lib/ckan
+
