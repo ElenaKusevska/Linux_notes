@@ -16,7 +16,7 @@ ckan generate config virtenvname/etc/ckan/default/ckan.ini
 edit ckan.ini
 sqlalchemy.url = postgresql://ckan_default:pass@localhost/ckan_default
 ckan.site_id = default
-ckan.site_url = 127.0.0.1
+ckan.site_url = https://127.0.0.1
 
 remove solr (https://askubuntu.com/questions/680690/how-to-uninstall-solr)
 sudo service solr stop
@@ -43,6 +43,7 @@ sed -i '/<initParams path="\/update\/\*\*">/,/<\/initParams>/ s/.*/<!--&-->/' so
 sed -i '/<processor class="solr.AddSchemaFieldsUpdateProcessorFactory">/,/<\/processor>/ s/.*/<!--&-->/' solrconfig.xml
 rm managed-schema
 cp ...virtenvname/src/ckan/ckan/config/solr/schema.xml .
+solr_url = http://127.0.0.1:8983/solr/ckan
 
 cp virtenvname/src/ckan/who.ini virtenvname/etc/ckan/default/who.ini
 
