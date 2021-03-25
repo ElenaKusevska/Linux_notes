@@ -1,3 +1,5 @@
+! Ref: https://stackoverflow.com/questions/2390395/fortran-handling-integer-values-of-size-700000000000
+
 program intt
   print *, selected_int_kind(1)
   print *, selected_int_kind(4)
