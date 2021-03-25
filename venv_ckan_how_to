@@ -30,6 +30,19 @@ sudo update-rc.d -f solr remove
 sudo rm -rf /etc/default/solr.in.sh
 
 reinstall solr (https://github.com/ckan/ckan/wiki/Install-and-use-Solr-6.5-with-CKAN)
+wget https://archive.apache.org/dist/lucene/solr/6.5.1/solr-6.5.1.tgz
+tar xzf solr-6.5.1.tgz solr-6.5.1/bin/install_solr_service.sh --strip-components=2
+sudo bash ./install_solr_service.sh solr-6.5.1.tgz
+sudo service solr status
+sudo su solr
+cd /opt/solr/bin
+./solr create -c ckan
+cd /var/solr/data/ckan/conf
+sed -i '/<config>/a <schemaFactory class="ClassicIndexSchemaFactory"/>' solrconfig.xml
+sed -i '/<initParams path="\/update\/\*\*">/,/<\/initParams>/ s/.*/<!--&-->/' solrconfig.xml
+sed -i '/<processor class="solr.AddSchemaFieldsUpdateProcessorFactory">/,/<\/processor>/ s/.*/<!--&-->/' solrconfig.xml
+rm managed-schema
+cp ...virtenvname/src/ckan/ckan/config/solr/schema.xml .
 
 cp virtenvname/src/ckan/who.ini virtenvname/etc/ckan/default/who.ini
 
