@@ -19,6 +19,16 @@ ckan.site_id = default
 ckan.site_url = 127.0.0.1
 
 remove solr (https://askubuntu.com/questions/680690/how-to-uninstall-solr)
+sudo service solr stop
+sudo rm -r /var/solr
+sudo rm -r /opt/solr-*
+sudo rm -r /opt/solr
+sudo rm /etc/init.d/solr
+sudo deluser --remove-home solr
+sudo deluser --group solr
+sudo update-rc.d -f solr remove
+sudo rm -rf /etc/default/solr.in.sh
+
 reinstall solr (https://github.com/ckan/ckan/wiki/Install-and-use-Solr-6.5-with-CKAN)
 
 cp virtenvname/src/ckan/who.ini virtenvname/etc/ckan/default/who.ini
