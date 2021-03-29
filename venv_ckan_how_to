@@ -47,5 +47,7 @@ solr_url = http://127.0.0.1:8983/solr/ckan
 
 cp virtenvname/src/ckan/who.ini virtenvname/etc/ckan/default/who.ini
 
-ckan.storage_path = /var/lib/ckan
+ckan.storage_path = virtenvname/ckan_storage
+debug = true
+install requirements, dev-requirements
 
