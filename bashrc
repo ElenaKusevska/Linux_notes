@@ -20,6 +20,20 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 
+Color	Code
+Black	0;30
+Blue	0;34
+Green	0;32
+Cyan	0;36
+Red	0;31
+Purple	0;35
+Brown	0;33
+Blue	0;34
+Green	0;32
+Cyan	0;36
+Red	0;31
+Purple	0;35
+Brown	0;33
 
 #-------------
 # aliases:
@@ -30,22 +44,8 @@ alias tar='tar -czvf'
 alias untar='tar xvzf'
 alias echosed='echo "sed -i -e ^s/foo/bar/g^ filename"' 
 
-alias goutput='/home/elena/Desktop/github_code/scripts_for_computational_cen    ter/gauss_output.sh'
-alias ginput='cp -r /home/elena/Desktop/github_code/dft_input_conformer/code    /*.py ./' 
-alias nciplot='/home/elena/Desktop/nciplot-3.0/src/nciplot'
-alias molden='/home/elena/Desktop/molden'
-alias MBNexplorer='/home/elena/Desktop/MBN/mbnexplorer64_3.0.2793_2019-02-03_Linux'
-alias MBNStudio='/home/elena/Desktop/MBN/MBNStudio'
-
-export PATH=~/anaconda3/bin:"$PATH"
-export NCIPLOT_HOME=/home/elena/Desktop/nciplot-3.0
-
 export VB=/media/sf_VBox-U-16
 	cp -r ./* $VB
-export cluster='username@host'
-	ssh $cluster
-export cluster_dir='username@host:/home/dir'
-	scp -r ./* $cluster_dir
 
 #----------------------------------
 # some other aliases (SPSA_FDSA) :
@@ -56,8 +56,23 @@ alias plot11='gnuplot "gnuscript11"'
 alias compile1='/home/elena/Desktop/thesis/2d-functions/makes/compile1.sh'
 alias compile2='/home/elena/Desktop/thesis/2d-functions/makes/compile2.sh'
 alias clean='/home/elena/Desktop/thesis/2d-functions/makes/clean.sh'
- 
-alias copycodeconf='cp -r /home/elena/Desktop/benz-SS-tetraoxide/optimize_co    nformer_script/code/* ./'
+
+alias goutput='/home/elena/Desktop/github_code/scripts_for_computational_center/gauss_output.sh'
+alias ginput='cp -r /home/elena/Desktop/github_code/dft_input_conformer/code/*.py ./' 
+alias nciplot='/home/elena/Desktop/nciplot-3.0/src/nciplot'
+alias molden='/home/elena/Desktop/molden'
+alias MBNexplorer='/home/elena/Desktop/MBN/mbnexplorer64_3.0.2793_2019-02-03_Linux'
+alias MBNStudio='/home/elena/Desktop/MBN/MBNStudio'
+
+alias copycodeconf='cp -r /home/elena/Desktop/benz-SS-tetraoxide/optimize_conformer_script/code/* ./'
+
+export PATH=~/anaconda3/bin:"$PATH"
+export NCIPLOT_HOME=/home/elena/Desktop/nciplot-3.0
+
+export cluster='username@host'
+	ssh $cluster
+export cluster_dir='username@host:/home/dir'
+	scp -r ./* $cluster_dir
 
 #----------------------------
 # colors when ls:
