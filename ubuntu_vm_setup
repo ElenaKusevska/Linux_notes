@@ -19,6 +19,9 @@ Virtualbox extensions are for usb 2.0 support (or other stuff, like webcam...)
 
 sudo adduser xxxxxxx vboxsf (log in and log out afterwards)
 
+sudo apt install vim
+sudo apt install trash-cli
+
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
