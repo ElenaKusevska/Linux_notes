@@ -35,9 +35,9 @@ Red	0;31
 Purple	0;35
 Brown	0;33
 
-#-------------
-# aliases:
-#-------------
+#--------------------------
+# aliases and exports:
+#--------------------------
 
 alias rm='gvfs-trash'
 alias tar='tar -czvf'
@@ -47,8 +47,10 @@ alias echosed='echo "sed -i -e ^s/foo/bar/g^ filename"'
 export VB=/media/sf_VBox-U-16
 	cp -r ./* $VB
 
+export PATH=$PATH:/home/elena/.local/bin
+
 #----------------------------------
-# some other aliases (SPSA_FDSA) :
+# comp chem aliases and exports:
 #----------------------------------
 
 alias plot='/home/elena/Desktop/thesis/2d-functions/makes/plot.sh'
