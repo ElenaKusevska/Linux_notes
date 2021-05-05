@@ -18,14 +18,14 @@ git remote -v
 origin	https://home.git (fetch)
 origin	https://home.git (push)
 
-git remote add upstream https://github.com/ckan/ckan.git
+git remote add upstream https://github.com/forked.git
 git remote -v
 
 origin	    https://home.git (fetch)
 origin	    https://home.git (push)
-upstream    https://fork.git (fetch)
-upstream    https://fork.git (push)
+upstream    https://github.com/forked.git (fetch)
+upstream    https://github.com/forked.git (push)
 
 git fetch upstream
-git merge upstream/master Merge the changes from upstream/master into your local master branch.
+git merge upstream/master # Merge the changes from upstream/master into your local master branch.
 git push
