@@ -13,7 +13,7 @@ PS1='[$(eval "echo ${MYPS}")]'
 
 if [ "$color_prompt" = yes ]; then
     MYPS='$(echo -n $(pwd) | awk '"'"'{ if (length>30) print "..." substr($0,length($0)-30,31); else  print; }'"'"')'
-    PS1='\[\033[0;32m\][\u@\h: $(eval "echo ${MYPS}")]$ \[\033[m\]'
+    PS1='\[\033[0;32m\][\u@\h: $(eval "echo ${MYPS}")]$ \[\033[m\]' # 1;32m is bold
     #regular text \[\033[0;32m\] green text \[\033[m\] regular text again
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
