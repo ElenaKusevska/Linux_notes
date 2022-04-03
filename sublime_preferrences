@@ -1,0 +1,22 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"font_size": 11,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+
+    // set vertical rulers in specified columns.
+    "rulers": [80],
+
+    // turn on word wrap for source and text
+    // default value is "auto", which means off for source and on for text
+    "word_wrap": true,
+
+    // set word wrapping at this column
+    // default value is 0, meaning wrapping occurs at window width
+    "wrap_width": 120,
+
+    "open_files_in_new_window": false,
+
+    "preview_on_click": false
+}
