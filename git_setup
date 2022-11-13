@@ -17,3 +17,10 @@ vi ~/.ssh/config
 Host *
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_rsa
+
+# Then go to github, open settings > ssh and gpg keys > add ssh key
+# add the contents of ~/.ssh/id_rsa.pub here
+# Then, go back to terminal
+
+ssh -T git@github.com
+# Should work, meaning ssh is set up for github successfully
