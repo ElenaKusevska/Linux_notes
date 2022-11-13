@@ -7,3 +7,13 @@ git config --global user.name "user_name"
 git config --global user.email "email_id"
 
 # set up ssh
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+# if ~/.ssh/config doesn't exist:
+touch ~/.ssh/config
+
+vi ~/.ssh/config
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa
