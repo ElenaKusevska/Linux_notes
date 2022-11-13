@@ -1,6 +1,9 @@
+# install git
 git --version
-
 sudo apt install git
 
+# git config
 git config --global user.name "user_name"
 git config --global user.email "email_id"
+
+# set up ssh
