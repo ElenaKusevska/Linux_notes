@@ -1,0 +1,19 @@
+# Ubuntu 18.04
+
+$ python --version
+Python 2.7.17
+
+$ python3 --version
+Python 3.6.9
+
+sudo apt update
+sudo apt install python3-pip
+
+sudo apt-get install python3-venv
+
+python3 -m venv ./venv
+source venv/bin/activate
+pip3 install --upgrade pip
+
+python3 -m pip freeze > requirements.txt
+python3 -m pip install -r requirements.txt
