@@ -1,0 +1,24 @@
+# For a simple setup use following docker-compose:
+
+version: '3'
+services:
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=elena
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+# MONGODB_CONNSTRING=mongodb://elena:pass@mongodb
+
+# To connect to the shell, use docker exec:
+
+docker ps
+docker exec -it (ps value) bash
+mongo mongodb://elena:pass@localhost:27017/
+
+# Also, when connecting to mongodb in Python use command:
+client = pymongo.MongoClient("mongodb://elena:pass@localhost:27017/")
+
+# Useful links:
+https://blog.e-zest.com/basic-commands-for-mongodb
